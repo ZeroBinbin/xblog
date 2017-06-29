@@ -1,6 +1,9 @@
 import React from 'react';
 import Butter from 'buttercms';
 import { Helmet } from "react-helmet";
+import MainLayout from '../layout/mainlayout.jsx';
+import Comment from './comment.jsx';
+import styles from './post.less';
 
 const butter = Butter("96a3af80d38da4a1925f455895d63270e480d191");
 
@@ -22,28 +25,30 @@ class Post extends React.Component {
         });
     }
 
+
     render() {
+        let { slug } = this.props.params;
         if (this.state.loaded) {
             const post = this.state.post;
 
             return (
-                <div>
+                <MainLayout>
                     <Helmet>
                         <title>{post.seo_title}</title>
                         <meta name="description" content={post.meta_description}/>
                         <meta name="og:image" content={post.featured_image}/>
                     </Helmet>
-
-                    <h1>{post.title}</h1>
-                    <div dangerouslySetInnerHTML={{__html: post.body}}/>
-                </div>
+                    <div className={ styles.note }>
+                        <div className={ styles.post }>
+                            <div className={ styles.title }>{ post.title }</div>
+                            <div className={ styles.showContent } dangerouslySetInnerHTML={{__html: post.body}}/>
+                            <Comment key="uyan_frame" slug = { slug }></Comment>
+                        </div>
+                    </div>
+                </MainLayout>
             );
         } else {
-            return (
-                <div>
-                    Loading...
-                </div>
-            );
+            return <MainLayout></MainLayout>
         }
     }
 }

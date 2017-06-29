@@ -2,6 +2,7 @@ import React from 'react';
 import Butter from 'buttercms';
 import List from './list.jsx';
 import styles from './home.less';
+import MainLayout from '../layout/mainlayout.jsx';
 
 const butter = Butter("96a3af80d38da4a1925f455895d63270e480d191");
 
@@ -21,12 +22,7 @@ class Home extends React.Component{
     }
     render(){
         let { articles ,activeMenu ,menus } = this.state;
-        return <div>
-            <nav className={ styles.navbarFixTop }>
-                <div className={ styles.widthLimit }>
-
-                </div>
-            </nav>
+        return <MainLayout>
             <div className={ styles.container }>
                 <div className={ styles.ownerMessageBox}></div>
                 <ul className={ styles.triggerMenus }>
@@ -40,7 +36,7 @@ class Home extends React.Component{
                 </ul>
                 <List articles={ articles }></List>
             </div>
-        </div>
+        </MainLayout>
     }
     changeActiveMenu(i){
         this.setState({ activeMenu : i })

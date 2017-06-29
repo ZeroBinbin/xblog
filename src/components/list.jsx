@@ -8,7 +8,6 @@ class List extends React.Component{
     }
     render(){
         let { articles } = this.props ;
-        console.log(articles)
         return <ul className={ styles.nodeList }>
             {
                 articles.map((article)=>{

@@ -16,7 +16,35 @@ p {
   -webkit-margin-start: 0px;
   -webkit-margin-end: 0px;
 }
-.home_navbar-fix-top_GAgPV {
+.post_note_3rPIB {
+  position: absolute;
+  padding-top: 10px;
+  width: 100%;
+}
+.post_note_3rPIB .post_post_rfQVD {
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 60px;
+  width: 620px;
+}
+.post_note_3rPIB .post_post_rfQVD .post_title_1T0NP {
+  word-break: break-all;
+  margin: 20px 0 0;
+  font-family: -apple-system, SF UI Display, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.post_note_3rPIB .post_post_rfQVD .post_show-content_ioc2g {
+  color: #2f2f2f;
+  word-break: break-all;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 50px;
+}
+.mainlayout_navbar-fix-top_2WOkW {
   position: fixed ;
   top: 0 ;
   left: 0 ;
@@ -25,7 +53,7 @@ p {
   border-bottom: #f0f0f0 ;
   background-color: #fff;
 }
-nav .home_width-limit_QaAfL {
+nav .mainlayout_width-limit_1AFDX {
   min-width: 768px ;
   max-width: 1440px ;
   margin: 0 auto ;
