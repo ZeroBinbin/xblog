@@ -1,0 +1,82 @@
+.navbar-fix-top{
+  position : fixed ;
+  top : 0 ;
+  left : 0 ;
+  right : 0 ;
+  min-height : 56px ;
+  border-bottom : #f0f0f0 ;
+  background-color : #fff;
+}
+nav .width-limit{
+  min-width : 768px ;
+  max-width : 1440px ;
+  margin : 0 auto ;
+}
+.container{
+  margin : 0 auto ;
+  padding : 0 15px 0 15px;
+}
+.owner-message-box {
+  width : 100%;
+  height: 68px;
+}
+.trigger-menus {
+  margin-bottom : 20px;
+  border-bottom : 1px solid #f0f0f0;
+  font-size : 0 ;
+  & li{
+    position: relative;
+    display: inline-block;
+    padding: 8px 0;
+    margin-bottom: -1px;
+    & a {
+      font-size : 15px;
+      font-weight : 700;
+      line-height : 25px;
+      padding: 13px 20px ;
+      color : #969696 ;
+    }
+    &.active{
+      border-bottom : 2px solid #646464 ;
+      & a {
+        color : #646464 ;
+      }
+    }
+    &:hover{
+      & a {
+        color : #646464 ;
+      }
+      &:after{
+        transform: translate(-50%) scaleX(1);
+        opacity: 1 ;
+      }
+    }
+    &:after{
+      content : "";
+      position: absolute;
+      left: 50%;
+      bottom: -2px;
+      width: 100%;
+      border-bottom: 2px solid #646464;
+      transform: translate(-50%) scaleX(0);
+      opacity:0 ;
+      transition: .2s ease-in-out;
+    }
+  }
+}
+
+@media screen and (min-width: 1300px){
+  .container{
+    width : 1081px
+  }
+}
+@media screen and (min-width: 1081px){
+  .container{
+    width : 960px
+  }
+}
+@media screen and (min-width: 768px){
+  .container{
+    width : 750px
+  }
+}

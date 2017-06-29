@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './list.less';
 import { Link } from 'react-router';
 
 class List extends React.Component{
@@ -7,10 +8,14 @@ class List extends React.Component{
     }
     render(){
         let { articles } = this.props ;
-        return <ul>
+        console.log(articles)
+        return <ul className={ styles.nodeList }>
             {
                 articles.map((article)=>{
-                    return <li><Link to={`/post/${ article.slug }`}>{ article.title }</Link></li>
+                    return <li>
+                        <Link className={ styles.title } to={`/post/${ article.slug }`}>{ article.title }</Link>
+                        <p className={ styles.summary }>{ article.summary }</p>
+                    </li>
                 })
             }
         </ul>
