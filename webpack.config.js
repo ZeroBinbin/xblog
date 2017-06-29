@@ -39,7 +39,7 @@ module.exports = {
     },
     plugins: [
         new ExtractTextPlugin({
-            filename: 'index.css',
+            filename: 'css/index.css',
             disable: false,
             allChunks: true,
         }),
