@@ -30354,7 +30354,7 @@ var Comment = function (_React$Component) {
         value: function componentDidMount() {
             var slug = this.props.slug;
 
-            uyan_config = slug;
+            uyan_config.su = slug;
             if (window.uyanFrame && window.uyanFrame[slug]) {
                 var frame = document.getElementById("uyan_frame");
                 frame.parentNode.replaceChild(window.uyanFrame[slug], frame);

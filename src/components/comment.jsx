@@ -12,7 +12,7 @@ class Comment extends React.Component {
 
     componentDidMount() {
         let { slug } = this.props;
-        uyan_config = slug ;
+        uyan_config.su = slug ;
         if(window.uyanFrame && window.uyanFrame[ slug ]){
             let frame = document.getElementById("uyan_frame");
             frame.parentNode.replaceChild(window.uyanFrame[ slug ] ,frame );
