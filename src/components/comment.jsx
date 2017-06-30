@@ -12,13 +12,14 @@ class Comment extends React.Component {
 
     componentDidMount() {
         let { slug } = this.props;
+        uyan_config = slug ;
         if(window.uyanFrame && window.uyanFrame[ slug ]){
             let frame = document.getElementById("uyan_frame");
             frame.parentNode.replaceChild(window.uyanFrame[ slug ] ,frame );
         }else{
             var script = document.createElement("script");
             script.charset = "utf-8";
-            script.src = "https://v2.uyan.cc/code/uyan.js?uid=2137679";
+            script.src = "http://v2.uyan.cc/code/uyan.js?uid=2137679";
             document.body.appendChild(script);
         }
     }
@@ -30,7 +31,7 @@ class Comment extends React.Component {
         var scripts = document.getElementsByTagName('script');
         for (var i = 0; i < scripts.length; i++) {
             var s = scripts[i];
-            if (s.getAttribute('src') === "https://v2.uyan.cc/code/uyan.js?uid=2137679") {
+            if (s.getAttribute('src') === "http://v2.uyan.cc/code/uyan.js?uid=2137679") {
                 s.parentElement.removeChild(s);
             }
         }
