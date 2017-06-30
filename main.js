@@ -30361,7 +30361,7 @@ var Comment = function (_React$Component) {
             } else {
                 var script = document.createElement("script");
                 script.charset = "utf-8";
-                script.src = "http://v2.uyan.cc/code/uyan.js?uid=2137679";
+                script.src = "http://v2.uyan.cc/code/uyan.js?uid=2137679&k=" + Math.random();
                 document.body.appendChild(script);
             }
         }
@@ -30375,7 +30375,7 @@ var Comment = function (_React$Component) {
             var scripts = document.getElementsByTagName('script');
             for (var i = 0; i < scripts.length; i++) {
                 var s = scripts[i];
-                if (s.getAttribute('src') === "http://v2.uyan.cc/code/uyan.js?uid=2137679") {
+                if (s.getAttribute('src') === "http://v2.uyan.cc/code/uyan.js?uid=2137679&k=" + Math.random()) {
                     s.parentElement.removeChild(s);
                 }
             }
