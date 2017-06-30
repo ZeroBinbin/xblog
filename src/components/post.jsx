@@ -2,7 +2,6 @@ import React from 'react';
 import Butter from 'buttercms';
 import { Helmet } from "react-helmet";
 import MainLayout from '../layout/mainlayout.jsx';
-import Comment from './comment.jsx';
 import styles from './post.less';
 
 const butter = Butter("96a3af80d38da4a1925f455895d63270e480d191");
@@ -26,6 +25,7 @@ class Post extends React.Component {
     }
 
 
+
     render() {
         let { slug } = this.props.params;
         if (this.state.loaded) {
@@ -42,7 +42,12 @@ class Post extends React.Component {
                         <div className={ styles.post }>
                             <div className={ styles.title }>{ post.title }</div>
                             <div className={ styles.showContent } dangerouslySetInnerHTML={{__html: post.body}}/>
-                            <Comment key="uyan_frame" slug = { slug }></Comment>
+                            <iframe
+                                id="uyan_iframe"
+                                src={ `./comment.html?slug=${ slug }` }
+                                frameBorder="0"
+                                style={{ width : '100%' ,minHeight : '250px'}}
+                            ></iframe>
                         </div>
                     </div>
                 </MainLayout>
