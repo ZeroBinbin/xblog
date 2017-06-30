@@ -14670,7 +14670,7 @@ __webpack_require__(285);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_reactDom2.default.render(_react2.default.createElement(_index2.default, { history: _reactRouter.hashHistory }), document.getElementById('root'));
+_reactDom2.default.render(_react2.default.createElement(_index2.default, { history: _reactRouter.browserHistory }), document.getElementById('root'));
 
 /***/ }),
 /* 125 */
