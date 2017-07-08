@@ -51,12 +51,37 @@ p {
   right: 0 ;
   min-height: 56px ;
   border-bottom: #f0f0f0 ;
-  background-color: #fff;
+  background-color: #797979;
+  font-size: 20px ;
+  line-height: 56px ;
+  color: #f0f0f0 ;
+  padding: 0 20px 0 20px ;
 }
 nav .mainlayout_width-limit_1AFDX {
   min-width: 768px ;
   max-width: 1440px ;
   margin: 0 auto ;
+}
+nav .mainlayout_search_1eAza {
+  display: inline-block;
+  height: 30px ;
+  vertical-align: middle;
+  border-radius: 6px ;
+  background-color: #eeeeee;
+  transition: 0.2s ease-in-out;
+  margin: 0 auto ;
+}
+nav .mainlayout_search_1eAza input {
+  width: 180px ;
+  border: none ;
+  background-color: transparent;
+  height: 28px ;
+  line-height: 28px ;
+  color: #f0f0f0 ;
+}
+nav .mainlayout_search_1eAza input:hover {
+  user-select: none ;
+  width: 240px ;
 }
 .home_container_129It {
   margin: 0 auto ;

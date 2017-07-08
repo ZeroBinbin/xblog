@@ -14263,7 +14263,16 @@ var MainLayout = function (_React$Component) {
                 _react2.default.createElement(
                     'nav',
                     { className: _mainlayout2.default.navbarFixTop },
-                    _react2.default.createElement('div', { className: _mainlayout2.default.widthLimit })
+                    _react2.default.createElement(
+                        'div',
+                        { className: _mainlayout2.default.widthLimit },
+                        'ZeroBinBin\u7684\u535A\u5BA2',
+                        _react2.default.createElement(
+                            'span',
+                            { className: style.search },
+                            _react2.default.createElement('input', { placeholder: '\u641C\u7D22' })
+                        )
+                    )
                 ),
                 children
             );
@@ -28980,7 +28989,7 @@ module.exports = {"container":"home_container_129It","owner-message-box":"home_o
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-module.exports = {"navbar-fix-top":"mainlayout_navbar-fix-top_2WOkW","navbarFixTop":"mainlayout_navbar-fix-top_2WOkW","width-limit":"mainlayout_width-limit_1AFDX","widthLimit":"mainlayout_width-limit_1AFDX"};
+module.exports = {"navbar-fix-top":"mainlayout_navbar-fix-top_2WOkW","navbarFixTop":"mainlayout_navbar-fix-top_2WOkW","width-limit":"mainlayout_width-limit_1AFDX","widthLimit":"mainlayout_width-limit_1AFDX","search":"mainlayout_search_1eAza"};
 
 /***/ }),
 /* 274 */
