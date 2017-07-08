@@ -34,6 +34,13 @@ module.exports = {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
                 use: ['babel-loader']
+            },
+            {
+                test: /\.(woff|svg|eot|ttf)\??.*$/,
+                use: 'file-loader?name=/icons/[name].[ext]'
+            },{
+                test: /\.(gif|jpg|png)\??.*$/,
+                use: 'url-loader?limit=50000&name=/icons/[name].[ext]'
             }
         ]
     },

@@ -25,6 +25,7 @@ nav .search{
   border-radius : 18px ;
   background-color : rgb(238 ,238 ,238);
   margin-left: 300px ;
+  position : relative;
   & input{
     width : 100px ;
     border:none ;
@@ -39,6 +40,23 @@ nav .search{
     &:focus{
       outline : none ;
       width : 240px ;
+      &+:global(.icon-search){
+        background-color : #969696 ;
+        color : #fff ;
+        border-radius : 50%;
+      }
     }
+  }
+  & :global(.icon-search) {
+    display : inline-block;
+    width : 30px ;
+    height : 30px ;
+    position : absolute;
+    top : 3px ;
+    right :3px ;
+    line-height : 30px;
+    text-align : center;
+    font-szie : 18px ;
+    color : #969696 ;
   }
 }
