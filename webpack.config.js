@@ -37,7 +37,7 @@ module.exports = {
             },
             {
                 test: /\.(woff|svg|eot|ttf)\??.*$/,
-                use: 'file-loader?name=/icons/[name].[ext]'
+                use: 'file-loader?name=icons/[name].[ext]'
             },{
                 test: /\.(gif|jpg|png)\??.*$/,
                 use: 'url-loader?limit=50000&name=/icons/[name].[ext]'

@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont";
-  src: url(/icons/iconfont.eot);
+  src: url(icons/iconfont.eot);
   /* IE9*/
-  src: url(/icons/iconfont.eot#iefix) format('embedded-opentype'),  url(/icons/iconfont.woff) format('woff'),  url(/icons/iconfont.ttf) format('truetype'),  url(/icons/iconfont.svg#iconfont) format('svg');
+  src: url(icons/iconfont.eot#iefix) format('embedded-opentype'),  url(icons/iconfont.woff) format('woff'),  url(icons/iconfont.ttf) format('truetype'),  url(icons/iconfont.svg#iconfont) format('svg');
   /* iOS 4.1- */
 }
 .iconfont {
