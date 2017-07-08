@@ -11,7 +11,7 @@ class MainLayout extends React.Component{
             <nav className={ styles.navbarFixTop }>
                 <div className={ styles.widthLimit }>
                     ZeroBinBin的博客
-                    <span className={ style.search } >
+                    <span className={ styles.search } >
                         <input placeholder="搜索" />
                     </span>
                 </div>

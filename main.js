@@ -14269,7 +14269,7 @@ var MainLayout = function (_React$Component) {
                         'ZeroBinBin\u7684\u535A\u5BA2',
                         _react2.default.createElement(
                             'span',
-                            { className: style.search },
+                            { className: _mainlayout2.default.search },
                             _react2.default.createElement('input', { placeholder: '\u641C\u7D22' })
                         )
                     )
