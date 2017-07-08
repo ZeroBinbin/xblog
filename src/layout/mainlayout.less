@@ -19,22 +19,25 @@ nav .width-limit{
 
 nav .search{
   display : inline-block;
-  height : 30px ;
+  height : 40px ;
   vertical-align : middle;
 
-  border-radius : 6px ;
+  border-radius : 15px ;
   background-color : rgb(238 ,238 ,238);
-  transition: .2s ease-in-out;
-  margin: 0 auto ;
+  margin-left: 300px ;
   & input{
     width : 180px ;
     border:none ;
     background-color: transparent;
-    height : 28px ;
-    line-height : 28px ;
-    color : #f0f0f0 ;
-    &:hover{
-      user-select : none ;
+    height : 40px ;
+    line-height : 40px ;
+    padding : 0 20px 0 20px ;
+    color : #797979 ;
+    vertical-align: top;
+    transition: .2s ease-in-out;
+    font-size : 18px;
+    &:focus{
+      outline : none ;
       width : 240px ;
     }
   }

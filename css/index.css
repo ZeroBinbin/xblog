@@ -64,23 +64,26 @@ nav .mainlayout_width-limit_1AFDX {
 }
 nav .mainlayout_search_1eAza {
   display: inline-block;
-  height: 30px ;
+  height: 40px ;
   vertical-align: middle;
-  border-radius: 6px ;
+  border-radius: 15px ;
   background-color: #eeeeee;
-  transition: 0.2s ease-in-out;
-  margin: 0 auto ;
+  margin-left: 300px ;
 }
 nav .mainlayout_search_1eAza input {
   width: 180px ;
   border: none ;
   background-color: transparent;
-  height: 28px ;
-  line-height: 28px ;
-  color: #f0f0f0 ;
+  height: 40px ;
+  line-height: 40px ;
+  padding: 0 20px 0 20px ;
+  color: #797979 ;
+  vertical-align: top;
+  transition: 0.2s ease-in-out;
+  font-size: 18px;
 }
-nav .mainlayout_search_1eAza input:hover {
-  user-select: none ;
+nav .mainlayout_search_1eAza input:focus {
+  outline: none ;
   width: 240px ;
 }
 .home_container_129It {
