@@ -64,18 +64,18 @@ nav .mainlayout_width-limit_1AFDX {
 }
 nav .mainlayout_search_1eAza {
   display: inline-block;
-  height: 40px ;
+  height: 36px ;
   vertical-align: middle;
-  border-radius: 15px ;
+  border-radius: 18px ;
   background-color: #eeeeee;
   margin-left: 300px ;
 }
 nav .mainlayout_search_1eAza input {
-  width: 180px ;
+  width: 100px ;
   border: none ;
   background-color: transparent;
-  height: 40px ;
-  line-height: 40px ;
+  height: 36px ;
+  line-height: 36px ;
   padding: 0 20px 0 20px ;
   color: #797979 ;
   vertical-align: top;
