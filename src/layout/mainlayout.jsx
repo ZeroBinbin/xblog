@@ -13,7 +13,7 @@ class MainLayout extends React.Component{
                     ZeroBinBin的博客
                     <span className={ styles.search } >
                         <input placeholder="搜索" />
-                        <span className="icon-search"></span>
+                        <span className="iconfont icon-search"></span>
                     </span>
                 </div>
             </nav>

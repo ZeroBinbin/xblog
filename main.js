@@ -14271,7 +14271,7 @@ var MainLayout = function (_React$Component) {
                             'span',
                             { className: _mainlayout2.default.search },
                             _react2.default.createElement('input', { placeholder: '\u641C\u7D22' }),
-                            _react2.default.createElement('span', { className: 'icon-search' })
+                            _react2.default.createElement('span', { className: 'iconfont icon-search' })
                         )
                     )
                 ),
