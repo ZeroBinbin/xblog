@@ -29335,25 +29335,17 @@ var Post = function (_React$Component) {
                                         } },
                                     '\u9996\u9875'
                                 ),
-                                '\u4E0A\u4E00\u7BC7 :',
-                                previous_post ? _react2.default.createElement(
-                                    'span',
-                                    null,
-                                    _react2.default.createElement(
-                                        _reactRouter.Link,
-                                        { to: '/post/' + previous_post.slug },
-                                        previous_post.title
-                                    )
-                                ) : null,
-                                '\u4E0B\u4E00\u7BC7 :',
+                                '\u4E0A\u4E00\u7BC7 : ',
                                 next_post ? _react2.default.createElement(
-                                    'span',
-                                    null,
-                                    _react2.default.createElement(
-                                        _reactRouter.Link,
-                                        { to: '/post/' + next_post.slug },
-                                        next_post.title
-                                    )
+                                    'a',
+                                    { href: '/#/post/' + next_post.slug },
+                                    next_post.title
+                                ) : null,
+                                '\u4E0B\u4E00\u7BC7 : ',
+                                previous_post ? _react2.default.createElement(
+                                    'a',
+                                    { href: '/#/post/' + previous_post.slug },
+                                    previous_post.title
                                 ) : null
                             ),
                             _react2.default.createElement('iframe', {
