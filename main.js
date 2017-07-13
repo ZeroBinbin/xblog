@@ -29285,23 +29285,20 @@ var Post = function (_React$Component) {
                     post: resp.data.data,
                     previous_post: resp.data.meta.previous_post,
                     next_post: resp.data.meta.next_post
+                }, function () {
+                    function autosuit(iframe) {
+                        console.log(iframe);
+                        if (iframe) {
+                            var iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
+                            if (iframeWin.document.body) {
+                                iframe.height = iframeWin.document.documentElement.scrollHeight || iframeWin.document.body.scrollHeight;
+                                console.log(iframe.height);
+                            }
+                        }
+                    };
+                    _this2.timer = window.setInterval(autosuit(document.getElementById("uyan_iframe")), 10);
                 });
             });
-        }
-    }, {
-        key: 'componentDidMount',
-        value: function componentDidMount() {
-            function autosuit(iframe) {
-                console.log(iframe);
-                if (iframe) {
-                    var iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
-                    if (iframeWin.document.body) {
-                        iframe.height = iframeWin.document.documentElement.scrollHeight || iframeWin.document.body.scrollHeight;
-                        console.log(iframe.height);
-                    }
-                }
-            };
-            this.timer = window.setInterval(autosuit(document.getElementById("uyan_iframe")), 10);
         }
     }, {
         key: 'componentWillUnmount',
