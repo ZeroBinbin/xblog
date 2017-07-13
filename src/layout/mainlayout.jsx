@@ -20,15 +20,15 @@ class MainLayout extends React.Component{
                         <input id="search" placeholder="搜索"  />
                         <span style={{ cursor: 'pointer'}}
                               className="iconfont icon-search"
-                              onClick={ this.onClickSearch.bind(this) } ></span>
+                              onClick={ this.onClickSearch } ></span>
                     </span>
                 </div>
             </nav>
             { children }
         </div>
     }
-    onClickSearch(e){
-        let { clickSearch = ()=>{} } = this.props ,searchWord = e.target.value;
+    onClickSearch(){
+        let { clickSearch = ()=>{} } = this.props ,searchWord = document.getElementById("search").value;
         clickSearch(searchWord === "" ? null : searchWord);
     }
 }

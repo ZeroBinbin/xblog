@@ -14280,7 +14280,7 @@ var MainLayout = function (_React$Component) {
                             _react2.default.createElement('input', { id: 'search', placeholder: '\u641C\u7D22' }),
                             _react2.default.createElement('span', { style: { cursor: 'pointer' },
                                 className: 'iconfont icon-search',
-                                onClick: this.onClickSearch.bind(this) })
+                                onClick: this.onClickSearch })
                         )
                     )
                 ),
@@ -14289,10 +14289,10 @@ var MainLayout = function (_React$Component) {
         }
     }, {
         key: 'onClickSearch',
-        value: function onClickSearch(e) {
+        value: function onClickSearch() {
             var _props$clickSearch = this.props.clickSearch,
                 clickSearch = _props$clickSearch === undefined ? function () {} : _props$clickSearch,
-                searchWord = e.target.value;
+                searchWord = document.getElementById("search").value;
 
             clickSearch(searchWord === "" ? null : searchWord);
         }
