@@ -50,6 +50,7 @@ module.exports = {
             disable: false,
             allChunks: true,
         }),
-        new webpack.optimize.CommonsChunkPlugin('common')
+        new webpack.optimize.CommonsChunkPlugin('common'),
+        new webpack.optimize.UglifyJsPlugin()
     ]
 };
