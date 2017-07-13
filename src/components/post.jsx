@@ -33,7 +33,7 @@ class Post extends React.Component {
 
     render() {
         let { slug } = this.props.params;
-        let { previous_post ,next_post } = this.props;
+        let { previous_post ,next_post } = this.state;
         if (this.state.loaded) {
             const post = this.state.post;
 
@@ -50,8 +50,8 @@ class Post extends React.Component {
                             <div className={ styles.showContent } dangerouslySetInnerHTML={{__html: post.body}}/>
                             <div className={ styles.pagination }>
                                 <span onClick={ ()=>{ window.open("/#/home") } }>首页</span>
-                                <span>上一篇 :</span>{ previous_post ? <Link to={`/post/${ previous_post.slug }`}>{ previous_post.title }</Link> : null }
-                                <span>下一篇 :</span>{ next_post ? <Link  to={`/post/${ next_post.slug }`}>{ next_post.title }</Link> : null }
+                                上一篇 :{ previous_post ? <span><Link to={`/post/${ previous_post.slug }`}>{ previous_post.title }</Link></span> : null }
+                                下一篇 :{ next_post ? <span><Link  to={`/post/${ next_post.slug }`}>{ next_post.title }</Link></span> : null }
                             </div>
                             <iframe
                                 id="uyan_iframe"

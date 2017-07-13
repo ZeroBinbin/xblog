@@ -29292,9 +29292,9 @@ var Post = function (_React$Component) {
         key: 'render',
         value: function render() {
             var slug = this.props.params.slug;
-            var _props = this.props,
-                previous_post = _props.previous_post,
-                next_post = _props.next_post;
+            var _state = this.state,
+                previous_post = _state.previous_post,
+                next_post = _state.next_post;
 
             if (this.state.loaded) {
                 var post = this.state.post;
@@ -29335,25 +29335,25 @@ var Post = function (_React$Component) {
                                         } },
                                     '\u9996\u9875'
                                 ),
-                                _react2.default.createElement(
-                                    'span',
-                                    null,
-                                    '\u4E0A\u4E00\u7BC7 :'
-                                ),
+                                '\u4E0A\u4E00\u7BC7 :',
                                 previous_post ? _react2.default.createElement(
-                                    _reactRouter.Link,
-                                    { to: '/post/' + previous_post.slug },
-                                    previous_post.title
-                                ) : null,
-                                _react2.default.createElement(
                                     'span',
                                     null,
-                                    '\u4E0B\u4E00\u7BC7 :'
-                                ),
+                                    _react2.default.createElement(
+                                        _reactRouter.Link,
+                                        { to: '/post/' + previous_post.slug },
+                                        previous_post.title
+                                    )
+                                ) : null,
+                                '\u4E0B\u4E00\u7BC7 :',
                                 next_post ? _react2.default.createElement(
-                                    _reactRouter.Link,
-                                    { to: '/post/' + next_post.slug },
-                                    next_post.title
+                                    'span',
+                                    null,
+                                    _react2.default.createElement(
+                                        _reactRouter.Link,
+                                        { to: '/post/' + next_post.slug },
+                                        next_post.title
+                                    )
                                 ) : null
                             ),
                             _react2.default.createElement('iframe', {
