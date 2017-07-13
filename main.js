@@ -14292,7 +14292,7 @@ var MainLayout = function (_React$Component) {
                 clickSearch = _props$clickSearch === undefined ? function () {} : _props$clickSearch,
                 searchWord = e.target.value;
 
-            clickSearch(searchWord);
+            clickSearch(searchWord === "" ? null : searchWord);
         }
     }]);
 
@@ -28030,7 +28030,7 @@ var Home = function (_React$Component) {
             total: 0,
             previous_page: null,
             next_page: null,
-            searchWord: props.params.searchWord || ""
+            searchWord: props.params.searchWord || null
         };
         return _this;
     }
@@ -28121,14 +28121,25 @@ var Home = function (_React$Component) {
         value: function list(page, page_size, searchWord) {
             var _this5 = this;
 
-            butter.post.search(searchWord, { page: page, page_size: page_size }).then(function (response) {
-                _this5.setState({
-                    articles: response.data.data,
-                    total: response.data.meta.count,
-                    previous_page: response.data.meta.previous_page,
-                    next_page: response.data.meta.next_page
+            if (searchWord) {
+                butter.post.search(searchWord, { page: page, page_size: page_size }).then(function (response) {
+                    _this5.setState({
+                        articles: response.data.data,
+                        total: response.data.meta.count,
+                        previous_page: response.data.meta.previous_page,
+                        next_page: response.data.meta.next_page
+                    });
                 });
-            });
+            } else {
+                butter.post.list({ page: page, page_size: page_size }).then(function (response) {
+                    _this5.setState({
+                        articles: response.data.data,
+                        total: response.data.meta.count,
+                        previous_page: response.data.meta.previous_page,
+                        next_page: response.data.meta.next_page
+                    });
+                });
+            }
         }
     }]);
 

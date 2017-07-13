@@ -65,14 +65,25 @@ class Home extends React.Component{
         })
     }
     list(page ,page_size ,searchWord){
-        butter.post.search(searchWord ,{ page, page_size }).then((response)=> {
-            this.setState({
-                articles: response.data.data ,
-                total: response.data.meta.count ,
-                previous_page: response.data.meta.previous_page ,
-                next_page: response.data.meta.next_page
-            });
-        })
+        if(searchWord){
+            butter.post.search(searchWord ,{ page, page_size }).then((response)=> {
+                this.setState({
+                    articles: response.data.data ,
+                    total: response.data.meta.count ,
+                    previous_page: response.data.meta.previous_page ,
+                    next_page: response.data.meta.next_page
+                });
+            })
+        }else{
+            butter.post.list({ page, page_size }).then((response)=> {
+                this.setState({
+                    articles: response.data.data ,
+                    total: response.data.meta.count ,
+                    previous_page: response.data.meta.previous_page ,
+                    next_page: response.data.meta.next_page
+                });
+            })
+        }
     }
 }
 export default Home
