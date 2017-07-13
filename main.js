@@ -14262,7 +14262,7 @@ var MainLayout = function (_React$Component) {
             }
             window.addEventListener("keydown", this.keyListener = function (event) {
                 if (event.keyCode == 13) {
-                    _this2.clickSearch();
+                    _this2.onClickSearch();
                 }
             });
         }
@@ -14289,7 +14289,7 @@ var MainLayout = function (_React$Component) {
                         _react2.default.createElement(
                             'span',
                             { className: _mainlayout2.default.search },
-                            _react2.default.createElement('input', { id: 'search', placeholder: '\u641C\u7D22' }),
+                            _react2.default.createElement('input', { id: 'search', placeholder: '\u641C\u7D22', onChange: this.changeSearch.bind(this) }),
                             _react2.default.createElement('span', { style: { cursor: 'pointer' },
                                 className: 'iconfont icon-search',
                                 onClick: this.onClickSearch.bind(this) })
@@ -14307,6 +14307,16 @@ var MainLayout = function (_React$Component) {
                 searchWord = document.getElementById("search").value;
 
             clickSearch(searchWord === "" ? null : searchWord);
+        }
+    }, {
+        key: 'changeSearch',
+        value: function changeSearch(e) {
+            var target = e.target;
+            if (target.value !== "") {
+                target.className = target.className + " " + _mainlayout2.default.focus;
+            } else {
+                target.className = target.className.replace(" " + _mainlayout2.default.focus, "");
+            }
         }
     }]);
 
