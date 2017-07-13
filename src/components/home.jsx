@@ -50,12 +50,7 @@ class Home extends React.Component{
     }
     clickSearch(searchWord){
         let { page_size } = this.props;
-        butter.post.search(searchWord,{ page : 1 , page_size }).then((response)=>{
-            this.setState({
-                articles : response.data.data ,
-                searchWord
-            });
-        })
+        this.list(1 ,page_size ,searchWord);
     }
     changePage(page){
         if(!page) return;
@@ -71,7 +66,8 @@ class Home extends React.Component{
                     articles: response.data.data ,
                     total: response.data.meta.count ,
                     previous_page: response.data.meta.previous_page ,
-                    next_page: response.data.meta.next_page
+                    next_page: response.data.meta.next_page ,
+                    searchWord
                 });
             })
         }else{

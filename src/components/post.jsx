@@ -47,7 +47,7 @@ class Post extends React.Component {
                         <div className={ styles.post }>
                             <div className={ styles.title }>{ post.title }</div>
                             <div className={ styles.showContent } dangerouslySetInnerHTML={{__html: post.body}}/>
-                            <div>
+                            <div className={ styles.pagination }>
                                 <span onClick={ ()=>{ window.open("/#/home") } }>首页</span>
                                 { previous_post ? <span>上一篇 :<Link to={`/post/${ previous_post.slug }`}>{ previous_post.title }</Link> </span> : null }
                                 { next_post ? <span>下一篇 :<Link  to={`/post/${ next_post.slug }`}>{ next_post.title }</Link></span> : null }

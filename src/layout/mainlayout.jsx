@@ -9,7 +9,17 @@ class MainLayout extends React.Component{
         if(this.props.params){
             document.getElementById("search").value = this.props.params.searchWord || "" ;
         }
+        window.addEventListener("keydown",  this.keyListener = (event)=> {
+            if (event.keyCode == 13) {
+                this.clickSearch();
+            }
+        });
     }
+
+    componentWillUnmount(){
+        window.removeEventListener("keydown" ,this.keyListener);
+    }
+
     render(){
         let { children } = this.props;
         return <div>
@@ -17,7 +27,7 @@ class MainLayout extends React.Component{
                 <div className={ styles.widthLimit }>
                     ZeroBinBin的博客
                     <span className={ styles.search } >
-                        <input id="search" placeholder="搜索"  />
+                        <input id="search" placeholder="搜索" onChange={ this.changeSearch }  />
                         <span style={{ cursor: 'pointer'}}
                               className="iconfont icon-search"
                               onClick={ this.onClickSearch } ></span>
@@ -30,6 +40,14 @@ class MainLayout extends React.Component{
     onClickSearch(){
         let { clickSearch = ()=>{} } = this.props ,searchWord = document.getElementById("search").value;
         clickSearch(searchWord === "" ? null : searchWord);
+    }
+    changeSearch(e){
+        let target = e.target ;
+        if(target.value !== ""){
+            target.className = target.className + " " + styles.focus
+        }else{
+            target.className = target.className.replace(" " + styles.focus ,"");
+        }
     }
 }
 export default MainLayout

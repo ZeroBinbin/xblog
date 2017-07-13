@@ -14255,9 +14255,21 @@ var MainLayout = function (_React$Component) {
     _createClass(MainLayout, [{
         key: 'componentDidMount',
         value: function componentDidMount() {
+            var _this2 = this;
+
             if (this.props.params) {
                 document.getElementById("search").value = this.props.params.searchWord || "";
             }
+            window.addEventListener("keydown", this.keyListener = function (event) {
+                if (event.keyCode == 13) {
+                    _this2.clickSearch();
+                }
+            });
+        }
+    }, {
+        key: 'componentWillUnmount',
+        value: function componentWillUnmount() {
+            window.removeEventListener("keydown", this.keyListener);
         }
     }, {
         key: 'render',
@@ -14277,7 +14289,7 @@ var MainLayout = function (_React$Component) {
                         _react2.default.createElement(
                             'span',
                             { className: _mainlayout2.default.search },
-                            _react2.default.createElement('input', { id: 'search', placeholder: '\u641C\u7D22' }),
+                            _react2.default.createElement('input', { id: 'search', placeholder: '\u641C\u7D22', onChange: this.changeSearch }),
                             _react2.default.createElement('span', { style: { cursor: 'pointer' },
                                 className: 'iconfont icon-search',
                                 onClick: this.onClickSearch })
@@ -14295,6 +14307,16 @@ var MainLayout = function (_React$Component) {
                 searchWord = document.getElementById("search").value;
 
             clickSearch(searchWord === "" ? null : searchWord);
+        }
+    }, {
+        key: 'changeSearch',
+        value: function changeSearch(e) {
+            var target = e.target;
+            if (target.value !== "") {
+                target.className = target.className + " " + _mainlayout2.default.focus;
+            } else {
+                target.className = target.className.replace(" " + _mainlayout2.default.focus, "");
+            }
         }
     }]);
 
@@ -28093,21 +28115,14 @@ var Home = function (_React$Component) {
     }, {
         key: 'clickSearch',
         value: function clickSearch(searchWord) {
-            var _this3 = this;
-
             var page_size = this.props.page_size;
 
-            butter.post.search(searchWord, { page: 1, page_size: page_size }).then(function (response) {
-                _this3.setState({
-                    articles: response.data.data,
-                    searchWord: searchWord
-                });
-            });
+            this.list(1, page_size, searchWord);
         }
     }, {
         key: 'changePage',
         value: function changePage(page) {
-            var _this4 = this;
+            var _this3 = this;
 
             if (!page) return;
             var _state3 = this.state,
@@ -28115,26 +28130,27 @@ var Home = function (_React$Component) {
                 searchWord = _state3.searchWord;
 
             this.setState({ page: page }, function () {
-                _this4.list(page, page_size, searchWord);
+                _this3.list(page, page_size, searchWord);
             });
         }
     }, {
         key: 'list',
         value: function list(page, page_size, searchWord) {
-            var _this5 = this;
+            var _this4 = this;
 
             if (searchWord) {
                 butter.post.search(searchWord, { page: page, page_size: page_size }).then(function (response) {
-                    _this5.setState({
+                    _this4.setState({
                         articles: response.data.data,
                         total: response.data.meta.count,
                         previous_page: response.data.meta.previous_page,
-                        next_page: response.data.meta.next_page
+                        next_page: response.data.meta.next_page,
+                        searchWord: searchWord
                     });
                 });
             } else {
                 butter.post.list({ page: page, page_size: page_size }).then(function (response) {
-                    _this5.setState({
+                    _this4.setState({
                         articles: response.data.data,
                         total: response.data.meta.count,
                         previous_page: response.data.meta.previous_page,
@@ -29192,7 +29208,7 @@ module.exports = {"container":"home_container_129It","owner-message-box":"home_o
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-module.exports = {"navbar-fix-top":"mainlayout_navbar-fix-top_2WOkW","navbarFixTop":"mainlayout_navbar-fix-top_2WOkW","width-limit":"mainlayout_width-limit_1AFDX","widthLimit":"mainlayout_width-limit_1AFDX","search":"mainlayout_search_1eAza"};
+module.exports = {"navbar-fix-top":"mainlayout_navbar-fix-top_2WOkW","navbarFixTop":"mainlayout_navbar-fix-top_2WOkW","width-limit":"mainlayout_width-limit_1AFDX","widthLimit":"mainlayout_width-limit_1AFDX","search":"mainlayout_search_1eAza","focus":"mainlayout_focus_Kr1JZ"};
 
 /***/ }),
 /* 276 */
@@ -29305,7 +29321,7 @@ var Post = function (_React$Component) {
                             _react2.default.createElement('div', { className: _post2.default.showContent, dangerouslySetInnerHTML: { __html: post.body } }),
                             _react2.default.createElement(
                                 'div',
-                                null,
+                                { className: _post2.default.pagination },
                                 _react2.default.createElement(
                                     'span',
                                     { onClick: function onClick() {
@@ -30555,7 +30571,7 @@ exports.warn = warn;
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-module.exports = {"note":"post_note_3rPIB","post":"post_post_rfQVD","title":"post_title_1T0NP","show-content":"post_show-content_ioc2g","showContent":"post_show-content_ioc2g"};
+module.exports = {"note":"post_note_3rPIB","post":"post_post_rfQVD","title":"post_title_1T0NP","show-content":"post_show-content_ioc2g","showContent":"post_show-content_ioc2g","pagination":"post_pagination_1YB8V"};
 
 /***/ }),
 /* 286 */
