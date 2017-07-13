@@ -29296,7 +29296,9 @@ var Post = function (_React$Component) {
                             }
                         }
                     };
-                    _this2.timer = window.setInterval(autosuit(document.getElementById("uyan_iframe")), 10);
+                    _this2.timer = window.setInterval(function () {
+                        autosuit(document.getElementById("uyan_iframe"));
+                    }, 10);
                 });
             });
         }

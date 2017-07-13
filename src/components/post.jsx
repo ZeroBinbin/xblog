@@ -36,7 +36,7 @@ class Post extends React.Component {
                         }
                     }
                 };
-                this.timer  = window.setInterval(autosuit(document.getElementById("uyan_iframe")),10)
+                this.timer  = window.setInterval(()=>{ autosuit(document.getElementById("uyan_iframe")) },10)
             })
         });
     }
