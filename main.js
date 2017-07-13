@@ -14255,10 +14255,9 @@ var MainLayout = function (_React$Component) {
     _createClass(MainLayout, [{
         key: 'componentDidMount',
         value: function componentDidMount() {
-            var _props$params$searchW = this.props.params.searchWord,
-                searchWord = _props$params$searchW === undefined ? "" : _props$params$searchW;
-
-            document.getElementById("search").value = searchWord;
+            if (this.props.params) {
+                document.getElementById("search").value = this.props.params.searchWord || "";
+            }
         }
     }, {
         key: 'render',
