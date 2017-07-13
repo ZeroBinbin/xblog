@@ -14313,7 +14313,7 @@ var MainLayout = function (_React$Component) {
         value: function changeSearch(e) {
             var target = e.target;
             if (target.value !== "") {
-                target.className = target.className + " " + _mainlayout2.default.focus;
+                if (target.className.indexOf(_mainlayout2.default.focus) == -1) target.className = target.className + " " + _mainlayout2.default.focus;
             } else {
                 target.className = target.className.replace(" " + _mainlayout2.default.focus, "");
             }

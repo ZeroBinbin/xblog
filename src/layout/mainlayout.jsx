@@ -44,6 +44,7 @@ class MainLayout extends React.Component{
     changeSearch(e){
         let target = e.target ;
         if(target.value !== ""){
+            if(target.className.indexOf(styles.focus) == -1)
             target.className = target.className + " " + styles.focus
         }else{
             target.className = target.className.replace(" " + styles.focus ,"");
