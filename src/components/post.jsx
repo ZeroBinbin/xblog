@@ -28,6 +28,20 @@ class Post extends React.Component {
             })
         });
     }
+    componentDidMount(){
+        function autosuit(iframe) {
+            if (iframe) {
+                var iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
+                if (iframeWin.document.body) {
+                    iframe.height = iframeWin.document.documentElement.scrollHeight || iframeWin.document.body.scrollHeight;
+                }
+            }
+        };
+        this.timer  = window.setInterval(autosuit(document.getElementById("uyan_iframe")),10)
+    }
+    componentWillUnmount(){
+        window.clearInterval(this.timer)
+    }
     componentWillReceiveProps(nextProps){
         let { slug } = nextProps.params;
         butter.post.retrieve(slug).then((resp) => {
@@ -68,7 +82,7 @@ class Post extends React.Component {
                                 id="uyan_iframe"
                                 src={ `./comment.html?slug=${ slug }` }
                                 frameBorder="0"
-                                style={{ width : '100%' ,minHeight : '250px'}}
+                                style={{ width : '100%' ,minHeight : '260px'}}
                             ></iframe>
                         </div>
                     </div>

@@ -29289,6 +29289,24 @@ var Post = function (_React$Component) {
             });
         }
     }, {
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            function autosuit(iframe) {
+                if (iframe) {
+                    var iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
+                    if (iframeWin.document.body) {
+                        iframe.height = iframeWin.document.documentElement.scrollHeight || iframeWin.document.body.scrollHeight;
+                    }
+                }
+            };
+            this.timer = window.setInterval(autosuit(document.getElementById("uyan_iframe")), 10);
+        }
+    }, {
+        key: 'componentWillUnmount',
+        value: function componentWillUnmount() {
+            window.clearInterval(this.timer);
+        }
+    }, {
         key: 'componentWillReceiveProps',
         value: function componentWillReceiveProps(nextProps) {
             var _this3 = this;
@@ -29368,7 +29386,7 @@ var Post = function (_React$Component) {
                                 id: 'uyan_iframe',
                                 src: './comment.html?slug=' + slug,
                                 frameBorder: '0',
-                                style: { width: '100%', minHeight: '250px' }
+                                style: { width: '100%', minHeight: '260px' }
                             })
                         )
                     )
