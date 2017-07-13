@@ -131,7 +131,7 @@ nav .mainlayout_search_1eAza {
   position: relative;
 }
 nav .mainlayout_search_1eAza input {
-  width: 100px ;
+  width: 180px ;
   border: none ;
   background-color: transparent;
   height: 36px ;
@@ -140,16 +140,7 @@ nav .mainlayout_search_1eAza input {
   color: #797979 ;
   vertical-align: top;
   transition: 0.2s ease-in-out;
-  font-size: 18px;
-}
-nav .mainlayout_search_1eAza input.mainlayout_focus_Kr1JZ {
-  outline: none ;
-  width: 240px ;
-}
-nav .mainlayout_search_1eAza input.mainlayout_focus_Kr1JZ + .icon-search {
-  background-color: #969696 ;
-  color: #fff ;
-  border-radius: 50%;
+  font-size: 16px;
 }
 nav .mainlayout_search_1eAza input:focus {
   outline: none ;

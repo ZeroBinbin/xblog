@@ -14289,10 +14289,10 @@ var MainLayout = function (_React$Component) {
                         _react2.default.createElement(
                             'span',
                             { className: _mainlayout2.default.search },
-                            _react2.default.createElement('input', { id: 'search', placeholder: '\u641C\u7D22', onChange: this.changeSearch }),
+                            _react2.default.createElement('input', { id: 'search', placeholder: '\u641C\u7D22' }),
                             _react2.default.createElement('span', { style: { cursor: 'pointer' },
                                 className: 'iconfont icon-search',
-                                onClick: this.onClickSearch })
+                                onClick: this.onClickSearch.bind(this) })
                         )
                     )
                 ),
@@ -14307,16 +14307,6 @@ var MainLayout = function (_React$Component) {
                 searchWord = document.getElementById("search").value;
 
             clickSearch(searchWord === "" ? null : searchWord);
-        }
-    }, {
-        key: 'changeSearch',
-        value: function changeSearch(e) {
-            var target = e.target;
-            if (target.value !== "") {
-                target.className = target.className + " " + _mainlayout2.default.focus;
-            } else {
-                target.className = target.className.replace(" " + _mainlayout2.default.focus, "");
-            }
         }
     }]);
 
@@ -29208,7 +29198,7 @@ module.exports = {"container":"home_container_129It","owner-message-box":"home_o
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-module.exports = {"navbar-fix-top":"mainlayout_navbar-fix-top_2WOkW","navbarFixTop":"mainlayout_navbar-fix-top_2WOkW","width-limit":"mainlayout_width-limit_1AFDX","widthLimit":"mainlayout_width-limit_1AFDX","search":"mainlayout_search_1eAza","focus":"mainlayout_focus_Kr1JZ"};
+module.exports = {"navbar-fix-top":"mainlayout_navbar-fix-top_2WOkW","navbarFixTop":"mainlayout_navbar-fix-top_2WOkW","width-limit":"mainlayout_width-limit_1AFDX","widthLimit":"mainlayout_width-limit_1AFDX","search":"mainlayout_search_1eAza"};
 
 /***/ }),
 /* 276 */
