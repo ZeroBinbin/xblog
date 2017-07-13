@@ -34,7 +34,7 @@ class Pagination extends React.Component {
                 (()=>{
                     let p = [] ;
                     for(var i = range.start ;i<=range.end ;i++){
-                        p.push(<span onClick={ ()=>{ changePage(i) } }>{ i }</span>)
+                        p.push(<span onClick={ ((i)=>{ changePage(i) }).bind(this ,i) }>{ i }</span>)
                     }
                     return p;
                 })()

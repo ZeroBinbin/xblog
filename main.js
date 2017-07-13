@@ -29140,6 +29140,8 @@ var Pagination = function (_React$Component) {
     }, {
         key: 'render',
         value: function render() {
+            var _this2 = this;
+
             var _props = this.props,
                 total = _props.total,
                 page = _props.page,
@@ -29165,9 +29167,9 @@ var Pagination = function (_React$Component) {
                     for (var i = range.start; i <= range.end; i++) {
                         p.push(_react2.default.createElement(
                             'span',
-                            { onClick: function onClick() {
+                            { onClick: function (i) {
                                     changePage(i);
-                                } },
+                                }.bind(_this2, i) },
                             i
                         ));
                     }
@@ -29288,7 +29290,10 @@ var Post = function (_React$Component) {
     }, {
         key: 'render',
         value: function render() {
-            var slug = this.props.params.slug;
+            var _props$params = this.props.params,
+                slug = _props$params.slug,
+                previous_post = _props$params.previous_post,
+                next_post = _props$params.next_post;
 
             if (this.state.loaded) {
                 var post = this.state.post;

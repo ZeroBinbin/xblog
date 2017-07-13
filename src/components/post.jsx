@@ -32,7 +32,7 @@ class Post extends React.Component {
 
 
     render() {
-        let { slug } = this.props.params;
+        let { slug ,previous_post ,next_post } = this.props.params;
         if (this.state.loaded) {
             const post = this.state.post;
 
