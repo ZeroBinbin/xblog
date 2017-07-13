@@ -29289,6 +29289,22 @@ var Post = function (_React$Component) {
             });
         }
     }, {
+        key: 'componentWillReceiveProps',
+        value: function componentWillReceiveProps(nextProps) {
+            var _this3 = this;
+
+            var slug = nextProps.params.slug;
+
+            butter.post.retrieve(slug).then(function (resp) {
+                _this3.setState({
+                    loaded: true,
+                    post: resp.data.data,
+                    previous_post: resp.data.meta.previous_post,
+                    next_post: resp.data.meta.next_post
+                });
+            });
+        }
+    }, {
         key: 'render',
         value: function render() {
             var slug = this.props.params.slug;
@@ -29338,13 +29354,13 @@ var Post = function (_React$Component) {
                                 '\u4E0A\u4E00\u7BC7 : ',
                                 next_post ? _react2.default.createElement(
                                     'a',
-                                    { href: '/#/post/' + next_post.slug + '?key=' + Math.random() },
+                                    { href: '/#/post/' + next_post.slug },
                                     next_post.title
                                 ) : null,
                                 '\u4E0B\u4E00\u7BC7 : ',
                                 previous_post ? _react2.default.createElement(
                                     'a',
-                                    { href: '/#/post/' + previous_post.slug + '?key=' + Math.random() },
+                                    { href: '/#/post/' + previous_post.slug },
                                     previous_post.title
                                 ) : null
                             ),

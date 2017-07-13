@@ -28,6 +28,17 @@ class Post extends React.Component {
             })
         });
     }
+    componentWillReceiveProps(nextProps){
+        let { slug } = nextProps.params;
+        butter.post.retrieve(slug).then((resp) => {
+            this.setState({
+                loaded: true,
+                post: resp.data.data ,
+                previous_post : resp.data.meta.previous_post ,
+                next_post : resp.data.meta.next_post
+            })
+        });
+    }
 
 
 
@@ -50,8 +61,8 @@ class Post extends React.Component {
                             <div className={ styles.showContent } dangerouslySetInnerHTML={{__html: post.body}}/>
                             <div className={ styles.pagination }>
                                 <span onClick={ ()=>{ window.open("/#/home") } }>首页</span>
-                                上一篇 : { next_post ? <a  href={`/#/post/${ next_post.slug }?key=${ Math.random() }`}>{ next_post.title }</a> : null }
-                                下一篇 : { previous_post ? <a href={`/#/post/${ previous_post.slug }?key=${ Math.random() }`}>{ previous_post.title }</a> : null }
+                                上一篇 : { next_post ? <a  href={`/#/post/${ next_post.slug }`}>{ next_post.title }</a> : null }
+                                下一篇 : { previous_post ? <a href={`/#/post/${ previous_post.slug }`}>{ previous_post.title }</a> : null }
                             </div>
                             <iframe
                                 id="uyan_iframe"
