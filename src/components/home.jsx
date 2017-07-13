@@ -19,7 +19,7 @@ class Home extends React.Component{
             total : 0 ,
             previous_page : null ,
             next_page : null ,
-            searchWord : props.params.searchWord || ""
+            searchWord : props.params.searchWord || null
         };
     }
     componentWillMount(){

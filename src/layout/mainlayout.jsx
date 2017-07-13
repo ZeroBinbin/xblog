@@ -6,8 +6,9 @@ class MainLayout extends React.Component{
         super(props);
     }
     componentDidMount(){
-        let { searchWord = "" } = this.props.params ;
-        document.getElementById("search").value = searchWord;
+        if(this.props.params){
+            document.getElementById("search").value = this.props.params.searchWord || "" ;
+        }
     }
     render(){
         let { children } = this.props;
@@ -26,7 +27,7 @@ class MainLayout extends React.Component{
     }
     onClickSearch(e){
         let { clickSearch = ()=>{} } = this.props ,searchWord = e.target.value;
-        clickSearch(searchWord);
+        clickSearch(searchWord === "" ? null : searchWord);
     }
 }
 export default MainLayout
