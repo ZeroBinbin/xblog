@@ -6,7 +6,7 @@ class MainLayout extends React.Component{
         super(props);
     }
     componentDidMount(){
-        let { searchWord } = this.props.params ;
+        let { searchWord = "" } = this.props.params ;
         document.getElementById("search").value = searchWord;
     }
     render(){
