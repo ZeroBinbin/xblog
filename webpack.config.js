@@ -8,6 +8,15 @@ module.exports = {
         path: __dirname,
         filename: './[name].js'
     },
+    devServer:{
+        historyApiFallback:true,
+        hot:true,
+        inline:true,
+        open : true ,
+        openPage : "#/" ,
+        noInfo : true ,
+        port:9090 //端口你可以自定义
+    },
     module: {
         rules: [
             {
@@ -51,6 +60,6 @@ module.exports = {
             allChunks: true,
         }),
         new webpack.optimize.CommonsChunkPlugin('common'),
-        new webpack.optimize.UglifyJsPlugin()
+        process.argv[3] === "-p" ? new webpack.optimize.UglifyJsPlugin() : new webpack.HotModuleReplacementPlugin()
     ]
 };
