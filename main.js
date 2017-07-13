@@ -29335,26 +29335,25 @@ var Post = function (_React$Component) {
                                         } },
                                     '\u9996\u9875'
                                 ),
+                                _react2.default.createElement(
+                                    'span',
+                                    null,
+                                    '\u4E0A\u4E00\u7BC7 :'
+                                ),
                                 previous_post ? _react2.default.createElement(
-                                    'span',
-                                    null,
-                                    '\u4E0A\u4E00\u7BC7 :',
-                                    _react2.default.createElement(
-                                        _reactRouter.Link,
-                                        { to: '/post/' + previous_post.slug },
-                                        previous_post.title
-                                    ),
-                                    ' '
+                                    _reactRouter.Link,
+                                    { to: '/post/' + previous_post.slug },
+                                    previous_post.title
                                 ) : null,
-                                next_post ? _react2.default.createElement(
+                                _react2.default.createElement(
                                     'span',
                                     null,
-                                    '\u4E0B\u4E00\u7BC7 :',
-                                    _react2.default.createElement(
-                                        _reactRouter.Link,
-                                        { to: '/post/' + next_post.slug },
-                                        next_post.title
-                                    )
+                                    '\u4E0B\u4E00\u7BC7 :'
+                                ),
+                                next_post ? _react2.default.createElement(
+                                    _reactRouter.Link,
+                                    { to: '/post/' + next_post.slug },
+                                    next_post.title
                                 ) : null
                             ),
                             _react2.default.createElement('iframe', {
