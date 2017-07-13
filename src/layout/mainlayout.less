@@ -37,7 +37,16 @@ nav .search{
     color : #797979 ;
     vertical-align: top;
     transition: .2s ease-in-out;
-    font-size : 16px;
+    font-size : 18px;
+    &.focus{
+      outline : none ;
+      width : 240px ;
+      &+:global(.icon-search){
+        background-color : #969696 ;
+        color : #fff ;
+        border-radius : 50%;
+      }
+    }
     &:focus{
       outline : none ;
       width : 240px ;
