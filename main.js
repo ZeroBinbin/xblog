@@ -14231,7 +14231,7 @@ var _react = __webpack_require__(6);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _mainlayout = __webpack_require__(274);
+var _mainlayout = __webpack_require__(275);
 
 var _mainlayout2 = _interopRequireDefault(_mainlayout);
 
@@ -14277,8 +14277,10 @@ var MainLayout = function (_React$Component) {
                         _react2.default.createElement(
                             'span',
                             { className: _mainlayout2.default.search },
-                            _react2.default.createElement('input', { id: 'search', placeholder: '\u641C\u7D22', onClick: this.onClickSearch.bind(this) }),
-                            _react2.default.createElement('span', { className: 'iconfont icon-search' })
+                            _react2.default.createElement('input', { id: 'search', placeholder: '\u641C\u7D22' }),
+                            _react2.default.createElement('span', { style: { cursor: 'pointer' },
+                                className: 'iconfont icon-search',
+                                onClick: this.onClickSearch.bind(this) })
                         )
                     )
                 ),
@@ -14390,7 +14392,7 @@ var _index2 = _interopRequireDefault(_index);
 
 var _reactRouter = __webpack_require__(44);
 
-__webpack_require__(285);
+__webpack_require__(286);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -25643,7 +25645,7 @@ var _home = __webpack_require__(249);
 
 var _home2 = _interopRequireDefault(_home);
 
-var _post = __webpack_require__(275);
+var _post = __webpack_require__(276);
 
 var _post2 = _interopRequireDefault(_post);
 
@@ -27995,7 +27997,7 @@ var _pagination = __webpack_require__(272);
 
 var _pagination2 = _interopRequireDefault(_pagination);
 
-var _home = __webpack_require__(273);
+var _home = __webpack_require__(274);
 
 var _home2 = _interopRequireDefault(_home);
 
@@ -29079,6 +29081,10 @@ var _react = __webpack_require__(6);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _pagination = __webpack_require__(273);
+
+var _pagination2 = _interopRequireDefault(_pagination);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -29130,7 +29136,7 @@ var Pagination = function (_React$Component) {
             var range = this.getRange(totalPage, page);
             return _react2.default.createElement(
                 'div',
-                null,
+                { className: _pagination2.default.pagination },
                 _react2.default.createElement(
                     'span',
                     { onClick: function onClick() {
@@ -29172,17 +29178,24 @@ exports.default = Pagination;
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-module.exports = {"container":"home_container_129It","owner-message-box":"home_owner-message-box_6zp2a","ownerMessageBox":"home_owner-message-box_6zp2a","trigger-menus":"home_trigger-menus_3BfrZ","triggerMenus":"home_trigger-menus_3BfrZ","active":"home_active_2Wvdj"};
+module.exports = {"pagination":"pagination_pagination_1Y8Ys"};
 
 /***/ }),
 /* 274 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-module.exports = {"navbar-fix-top":"mainlayout_navbar-fix-top_2WOkW","navbarFixTop":"mainlayout_navbar-fix-top_2WOkW","width-limit":"mainlayout_width-limit_1AFDX","widthLimit":"mainlayout_width-limit_1AFDX","search":"mainlayout_search_1eAza"};
+module.exports = {"container":"home_container_129It","owner-message-box":"home_owner-message-box_6zp2a","ownerMessageBox":"home_owner-message-box_6zp2a","trigger-menus":"home_trigger-menus_3BfrZ","triggerMenus":"home_trigger-menus_3BfrZ","active":"home_active_2Wvdj"};
 
 /***/ }),
 /* 275 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+module.exports = {"navbar-fix-top":"mainlayout_navbar-fix-top_2WOkW","navbarFixTop":"mainlayout_navbar-fix-top_2WOkW","width-limit":"mainlayout_width-limit_1AFDX","widthLimit":"mainlayout_width-limit_1AFDX","search":"mainlayout_search_1eAza"};
+
+/***/ }),
+/* 276 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29202,7 +29215,7 @@ var _buttercms = __webpack_require__(117);
 
 var _buttercms2 = _interopRequireDefault(_buttercms);
 
-var _reactHelmet = __webpack_require__(276);
+var _reactHelmet = __webpack_require__(277);
 
 var _mainlayout = __webpack_require__(120);
 
@@ -29210,7 +29223,7 @@ var _mainlayout2 = _interopRequireDefault(_mainlayout);
 
 var _reactRouter = __webpack_require__(44);
 
-var _post = __webpack_require__(284);
+var _post = __webpack_require__(285);
 
 var _post2 = _interopRequireDefault(_post);
 
@@ -29348,7 +29361,7 @@ var Post = function (_React$Component) {
 exports.default = Post;
 
 /***/ }),
-/* 276 */
+/* 277 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(process) {exports.__esModule = true;
@@ -29366,15 +29379,15 @@ var _propTypes = __webpack_require__(12);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _reactSideEffect = __webpack_require__(277);
+var _reactSideEffect = __webpack_require__(278);
 
 var _reactSideEffect2 = _interopRequireDefault(_reactSideEffect);
 
-var _deepEqual = __webpack_require__(280);
+var _deepEqual = __webpack_require__(281);
 
 var _deepEqual2 = _interopRequireDefault(_deepEqual);
 
-var _HelmetUtils = __webpack_require__(283);
+var _HelmetUtils = __webpack_require__(284);
 
 var _HelmetConstants = __webpack_require__(121);
 
@@ -29643,7 +29656,7 @@ exports.default = HelmetExport;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 277 */
+/* 278 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29653,11 +29666,11 @@ var _react = __webpack_require__(6);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _exenv = __webpack_require__(278);
+var _exenv = __webpack_require__(279);
 
 var _exenv2 = _interopRequireDefault(_exenv);
 
-var _shallowequal = __webpack_require__(279);
+var _shallowequal = __webpack_require__(280);
 
 var _shallowequal2 = _interopRequireDefault(_shallowequal);
 
@@ -29767,7 +29780,7 @@ module.exports = function withSideEffect(reducePropsToState, handleStateChangeOn
 };
 
 /***/ }),
-/* 278 */
+/* 279 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -29814,7 +29827,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 
 /***/ }),
-/* 279 */
+/* 280 */
 /***/ (function(module, exports) {
 
 module.exports = function shallowEqual(objA, objB, compare, compareContext) {
@@ -29870,12 +29883,12 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 
 /***/ }),
-/* 280 */
+/* 281 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var pSlice = Array.prototype.slice;
-var objectKeys = __webpack_require__(281);
-var isArguments = __webpack_require__(282);
+var objectKeys = __webpack_require__(282);
+var isArguments = __webpack_require__(283);
 
 var deepEqual = module.exports = function (actual, expected, opts) {
   if (!opts) opts = {};
@@ -29970,7 +29983,7 @@ function objEquiv(a, b, opts) {
 
 
 /***/ }),
-/* 281 */
+/* 282 */
 /***/ (function(module, exports) {
 
 exports = module.exports = typeof Object.keys === 'function'
@@ -29985,7 +29998,7 @@ function shim (obj) {
 
 
 /***/ }),
-/* 282 */
+/* 283 */
 /***/ (function(module, exports) {
 
 var supportsArgumentsClass = (function(){
@@ -30011,7 +30024,7 @@ function unsupported(object){
 
 
 /***/ }),
-/* 283 */
+/* 284 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports.__esModule = true;
@@ -30538,14 +30551,14 @@ exports.requestIdleCallback = requestIdleCallback;
 exports.warn = warn;
 
 /***/ }),
-/* 284 */
+/* 285 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 module.exports = {"note":"post_note_3rPIB","post":"post_post_rfQVD","title":"post_title_1T0NP","show-content":"post_show-content_ioc2g","showContent":"post_show-content_ioc2g"};
 
 /***/ }),
-/* 285 */
+/* 286 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

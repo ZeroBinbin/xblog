@@ -17,8 +17,10 @@ class MainLayout extends React.Component{
                 <div className={ styles.widthLimit }>
                     ZeroBinBin的博客
                     <span className={ styles.search } >
-                        <input id="search" placeholder="搜索" onClick={ this.onClickSearch.bind(this) } />
-                        <span className="iconfont icon-search"></span>
+                        <input id="search" placeholder="搜索"  />
+                        <span style={{ cursor: 'pointer'}}
+                              className="iconfont icon-search"
+                              onClick={ this.onClickSearch.bind(this) } ></span>
                     </span>
                 </div>
             </nav>

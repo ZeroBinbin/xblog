@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './pagination.less';
 
 
 class Pagination extends React.Component {
@@ -27,7 +28,7 @@ class Pagination extends React.Component {
         let { total ,page ,page_size ,changePage ,previous_page ,next_page } = this.props;
         let totalPage = Math.ceil(total / page_size) ;
         let range = this.getRange(totalPage ,page) ;
-        return <div>
+        return <div className={ styles.pagination }>
             <span onClick={ ()=>{ changePage(previous_page) } }>上一页</span>
             {
                 (()=>{
