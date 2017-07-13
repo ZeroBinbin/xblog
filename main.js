@@ -29338,13 +29338,13 @@ var Post = function (_React$Component) {
                                 '\u4E0A\u4E00\u7BC7 : ',
                                 next_post ? _react2.default.createElement(
                                     'a',
-                                    { href: '/#/post/' + next_post.slug },
+                                    { href: '/#/post/' + next_post.slug + '?key=' + Math.random() },
                                     next_post.title
                                 ) : null,
                                 '\u4E0B\u4E00\u7BC7 : ',
                                 previous_post ? _react2.default.createElement(
                                     'a',
-                                    { href: '/#/post/' + previous_post.slug },
+                                    { href: '/#/post/' + previous_post.slug + '?key=' + Math.random() },
                                     previous_post.title
                                 ) : null
                             ),
