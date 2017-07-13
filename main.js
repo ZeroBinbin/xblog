@@ -25680,7 +25680,8 @@ exports.default = function (_ref) {
         _reactRouter.Router,
         { history: history },
         _react2.default.createElement(_reactRouter.Route, { path: '/', component: _home2.default }),
-        _react2.default.createElement(_reactRouter.Route, { path: '/:searchWord', component: _home2.default }),
+        _react2.default.createElement(_reactRouter.Route, { path: '/home', component: _home2.default }),
+        _react2.default.createElement(_reactRouter.Route, { path: '/home/:searchWord', component: _home2.default }),
         _react2.default.createElement(_reactRouter.Route, { path: '/post/:slug', component: _post2.default })
     );
 };
