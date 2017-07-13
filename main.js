@@ -29291,10 +29291,10 @@ var Post = function (_React$Component) {
     }, {
         key: 'render',
         value: function render() {
-            var _props$params = this.props.params,
-                slug = _props$params.slug,
-                previous_post = _props$params.previous_post,
-                next_post = _props$params.next_post;
+            var slug = this.props.params.slug;
+            var _props = this.props,
+                previous_post = _props.previous_post,
+                next_post = _props.next_post;
 
             if (this.state.loaded) {
                 var post = this.state.post;
